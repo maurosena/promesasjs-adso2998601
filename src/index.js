@@ -1,17 +1,12 @@
-//Funcion para simular la descarga de un archivo, utilizando promesas
-
-function descargarArchivo() {
-    return new Promise((resolve) => {
-        setTimeout(() =>{
-            resolve("📁 Archivo descargado con exito .... ")
-        }, 5000)
-    })
+function promesaSimple() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promesa simple ejecutada despues de 8s");
+        }, 8000);
+    });
 }
+    
+promesaSimple().then(mensaje => {
+    console.log(mensaje);
+})
 
-console.log(descargarArchivo()
-    .then((resultado) => {
-        console.log(resultado)
-    })
-)
-    
-    
